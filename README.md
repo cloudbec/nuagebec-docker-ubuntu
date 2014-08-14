@@ -13,8 +13,8 @@ It include some tools like :
 Usage
 -----
 
-To create the image `nuagebec/ubuntu` with one tag per Ubuntu release, 
-execute the following commands on the tutum-ubuntu branch:
+To create the image `nuagebec/ubuntu` with Ubuntu, 
+execute the following commands on the nugebec-ubuntu master branch:
 	
 	git checkout master
 	docker build -t nuagebec/ubuntu .
