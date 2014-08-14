@@ -22,8 +22,8 @@ execute the following commands on the tutum-ubuntu branch:
 Running nuagebec/ubuntu
 --------------------
 
-To run a container from the image you created earlier with the `trusty` tag 
-binding it to port 2222 in all interfaces, execute:
+To run a container from the image you created earlier binding it to port 2222 in
+all interfaces, execute:
 
 	docker run -d -p 0.0.0.0:2222:22 nuagebec/ubuntu
 
