@@ -7,13 +7,13 @@ RUN apt-get update -y && DEBIAN_FRONTEND=noninteractive apt-get -y install opens
 #https://github.com/docker/docker/issues/6103
 RUN mkdir -p /var/run/sshd && sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && sed -i "s/PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config && sed -ri 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
 
-# Define mountable directories.
-VOLUME ["/data"]
+# Define volume
+VOLUME /data/persistent
 
 # Define working directory.
 WORKDIR /data
 
-ADD set_root_pw.sh /set_root_pw.sh
+ADD set_root_pw.sh /data/set_root_pw.sh
 ADD run.sh /data/run.sh
 
 ADD sshd.conf /etc/supervisor/conf.d/sshd.conf
