@@ -5,7 +5,7 @@ MAINTAINER Michaël Faille <michael.faille@nuagebec.ca>
 RUN apt-get update -y && DEBIAN_FRONTEND=noninteractive apt-get -y install openssh-server pwgen supervisor git tar vim-nox vim-syntax-go && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #https://github.com/docker/docker/issues/6103
-RUN mkdir -p /var/run/sshd && sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && sed -i "s/PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config && RUN sed -ri 's/UsePAM yes/UsePAM no/g' 
+RUN mkdir -p /var/run/sshd && sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && sed -i "s/PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config && sed -ri 's/UsePAM yes/UsePAM no/g' 
 
 # Define mountable directories.
 VOLUME ["/data"]
