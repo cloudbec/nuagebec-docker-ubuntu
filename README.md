@@ -5,11 +5,13 @@ Simple Ubuntu docker images with SSH access and supervisord.
 
 It include some tools like :
 
-- python
+- python 2.7 & 3
+- ruby 1.9
 - curl
-- vim
+- vim-nox
 - git
 - tar
+
 
 Usage
 -----
