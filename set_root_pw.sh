@@ -11,7 +11,7 @@ echo "=> Setting a ${_word} password to the root user"
 echo "root:$PASS" | chpasswd
 
 echo "=> Done!"
-touch /data/persistant/.root_pw_set
+touch /data/persistent/.root_pw_set
 
 echo "========================================================================"
 echo "You can now connect to this Ubuntu container via SSH using:"
