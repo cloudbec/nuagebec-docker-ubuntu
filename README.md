@@ -7,7 +7,7 @@ It include some tools like :
 
 - python 2.7 & 3
 - ruby 1.9
-- curl
+- wget
 - vim-nox
 - git
 - tar
