@@ -11,6 +11,7 @@ It include some tools like :
 - vim-nox
 - git
 - tar
+- ca-certificates
 
 
 Usage
