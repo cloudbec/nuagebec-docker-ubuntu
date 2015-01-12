@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Michaël Faille <michael.faille@nuagebec.ca> 
+MAINTAINER Michaël Faille <michael@faille.io> 
 
 # Install packages
 RUN apt-get update -y && DEBIAN_FRONTEND=noninteractive apt-get -y install openssh-server ca-certificates pwgen supervisor git tar vim-nox vim-syntax-go && apt-get clean --no-install-recommends && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
