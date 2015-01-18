@@ -7,18 +7,18 @@ RUN apt-get update -y && DEBIAN_FRONTEND=noninteractive apt-get -y install opens
 # #https://github.com/docker/docker/issues/6103
 # RUN mkdir -p /var/run/sshd && sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && sed -i "s/PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config && sed -ri 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
 
-# # Define volume
-# VOLUME /data/persistent
+# define volume
+VOLUME /data/persistent
 
-# # Define working directory.
-# WORKDIR /data
+# Define working directory.
+WORKDIR /data
 
-# ADD set_root_pw.sh /data/set_root_pw.sh
-# ADD run.sh /data/run.sh
+ADD set_root_pw.sh /data/set_root_pw.sh
+ADD run.sh /data/run.sh
 
-# ADD sshd.conf /etc/supervisor/conf.d/sshd.conf
+ADD sshd.conf /etc/supervisor/conf.d/sshd.conf
 
-# RUN chmod a+x /data/*.sh
+RUN chmod a+x /data/*.sh
 
 # ## Strangely... docker.io don't want build this image since xterm env..
 # # ENV TERM="xterm-color"
