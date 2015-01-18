@@ -13,8 +13,6 @@ It include some tools like :
 - tar
 - ca-certificates
 
-Rare feature on docker image : color terminal is enable by default ;-)
-
 Usage
 -----
 
