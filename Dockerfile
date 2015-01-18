@@ -20,7 +20,8 @@ ADD sshd.conf /etc/supervisor/conf.d/sshd.conf
 
 RUN chmod a+x /data/*.sh
 
-ENV TERM="xterm-color"
+## Strangely... docker.io don't want build this image since xterm env..
+# ENV TERM="xterm-color"
 
 EXPOSE 22
 CMD ["/data/run.sh"]
