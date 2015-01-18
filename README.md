@@ -13,16 +13,17 @@ It include some tools like :
 - tar
 - ca-certificates
 
+Rare feature on docker image : color terminal is enable by default ;-)
 
 Usage
 -----
 
-To create the image `nuagebec/ubuntu` with Ubuntu, 
+To create the image `nuagebec/ubuntu` with Ubuntu,
 execute the following commands on the nugebec-ubuntu master branch:
-	
+
 	git checkout master
 	docker build -t nuagebec/ubuntu .
-	
+
 Running nuagebec/ubuntu
 --------------------
 
@@ -59,4 +60,3 @@ If you want to use a preset password instead of a random generated one, you can
 set the environment variable `ROOT_PASS` to your specific password when running the container:
 
 	docker run -d -p 0.0.0.0:2222:22 -e ROOT_PASS="mypass" nuagebec/ubuntu
-
