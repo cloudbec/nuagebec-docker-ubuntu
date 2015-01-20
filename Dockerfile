@@ -16,6 +16,10 @@ WORKDIR /data
 ADD set_root_pw.sh /data/set_root_pw.sh
 ADD run.sh /data/run.sh
 
+
+# As suggested here : http://docs.docker.com/articles/using_supervisord/
+ADD supervisord_nuagebec.conf /etc/supervisor/conf.d/supervisord_nuagebec.conf
+
 ADD sshd.conf /etc/supervisor/conf.d/sshd.conf
 
 RUN chmod a+x /data/*.sh
