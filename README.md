@@ -58,3 +58,12 @@ If you want to use a preset password instead of a random generated one, you can
 set the environment variable `ROOT_PASS` to your specific password when running the container:
 
 	docker run -d -p 0.0.0.0:2222:22 -e ROOT_PASS="mypass" nuagebec/ubuntu
+
+Deactivating ssh server
+-----------------------
+
+you may not like to have a running ssh server use SSH_SERVER=false to prevent starting it. Default is true
+
+
+        docker run -e SSH_SERVER=false nuagebec/ubuntu
+
