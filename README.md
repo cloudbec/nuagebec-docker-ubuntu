@@ -1,6 +1,10 @@
 nuagebec-ubuntu
 ============
 
+develop branch is the upcoming 16.04
+master branch is using ubuntu 15.04
+14.04 branch is using ubuntu 14.04
+
 Simple always updated Ubuntu docker images with SSH access and supervisord.
 
 It include some tools like :
