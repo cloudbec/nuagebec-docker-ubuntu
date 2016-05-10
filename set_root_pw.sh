@@ -32,7 +32,7 @@ else
     echo "You can now connect to this Ubuntu container"
     echo ""
     echo " Using SSH, for reach 1st interface ip at port 22"
-    echo " ssh root@"$(ip -o -4 addr show | awk -F '[ /]+' '/global/ {print $4}' | head -n1)
+    echo " ssh root@"$(ifconfig | grep "inet " | awk -F'[: ]+' '{ print $4 }' | head -n1)
     echo ""
     echo "and enter the root password '$PASS' when prompted"
     echo ""
