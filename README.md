@@ -3,7 +3,6 @@ nuagebec-ubuntu
 [![Docker Stars](https://img.shields.io/docker/stars/_/ubuntu.svg)]()
 [![Docker Pulls](https://img.shields.io/docker/pulls/mashape/kong.svg)]()
 [![Docker Automated buil](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)]()
-[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/_/ubuntu/latest.svg)]()
 
 Simple always updated Ubuntu docker images with SSH access and supervisord.
 
